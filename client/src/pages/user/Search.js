@@ -4,6 +4,7 @@ import Layout from '../../components/Layout/Layout'
 import { useCart } from '../../context/cart'
 import { Link } from '@mui/material'
 import toast from 'react-hot-toast'
+import { NavLink } from 'react-router-dom'
 export const Search = () => {
   const [cart,setCart] = useCart()
     const [value] = useSearch()
@@ -16,13 +17,13 @@ export const Search = () => {
             value?.results.map((p) => (
               
               <div className="card">
-                <Link to={`/product-details/${p.slug}`} className="card-img">
+                <NavLink to={`/product-details/${p.slug}`} className="card-img">
                   <img
                     src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
                     className="card-img-top"
                     alt={p.slug}
                   />
-                </Link>
+                </NavLink>
                 <div className="card-info">
                   <p className="text-xl font-bold">{p.name.substring(0,20)}...</p>
                   <p className="text-body">

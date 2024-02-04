@@ -159,6 +159,7 @@ export const getPhotoController = async (req, res) => {
   }
 };
 
+//Filter products
 export const filterProductController = async (req, res) => {
   try {
     const { checked, radio } = req.body;
@@ -177,6 +178,8 @@ export const filterProductController = async (req, res) => {
   }
 };
 
+
+//count of total products
 export const totalProductController = async (req, res) => {
   try {
     const total = await productModel.estimatedDocumentCount();
@@ -189,6 +192,7 @@ export const totalProductController = async (req, res) => {
   }
 };
 
+//fetching more products
 export const moreProductController = async (req, res) => {
   const page = req.params.page ? req.params.page : 1;
   const perPage = 8;
@@ -204,6 +208,8 @@ export const moreProductController = async (req, res) => {
   });
 };
 
+
+//search product
 export const searchProductController = async (req, res) => {
   try {
     const { keyword } = req.params;

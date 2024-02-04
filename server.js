@@ -38,7 +38,7 @@ app.use('/api/v1/product',productRoute)
 
 
 app.get('*',(req,res)=>{
-    res.sendFile(path.join(__dirname,'./client/build/index.html'))
+    // res.sendFile(path.join(__dirname,'./client/build/index.html'))
 })
 
 const PORT = process.env.PORT || 3030; 

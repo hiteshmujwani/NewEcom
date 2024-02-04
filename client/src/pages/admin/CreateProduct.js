@@ -49,7 +49,7 @@ export default function CreateProduct() {
          <div className="col-md-3">
           <AdminMenu/>
          </div>
-         <div className="col-md-9 mt-2" style={{"height":"80vh"}}> 
+         <div className="col-md-9 mt-2" style={{"minheight":"80vh","maxHeight":"100%"}}> 
           <h1 className='text-3xl font-medium text-center p-3 border border-black bg-gray-500 text-white'>Create Your New Product</h1>
           <div className='flex flex-col'> 
           <div className='flex w-100 mt-3 gap-3'>
