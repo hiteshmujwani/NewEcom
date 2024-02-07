@@ -19,7 +19,7 @@ export const Search = () => {
               <div className="card">
                 <NavLink to={`/product-details/${p.slug}`} className="card-img">
                   <img
-                    src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
+                    src={`/api/v1/product/product-photo/${p._id}`}
                     className="card-img-top"
                     alt={p.slug}
                   />

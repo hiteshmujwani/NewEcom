@@ -18,7 +18,7 @@ const [product,setProduct] = useState({})
   //get Product Details 
   const getProductDetails = async() =>{
     try {
-      const res = await axios.get(`${process.env.REACT_APP_API}/api/v1/product/get-product/${params.slug}`)
+      const res = await axios.get(`/api/v1/product/get-product/${params.slug}`)
       setProduct(res.data.product)
     } catch (error) {
       console.log(error)

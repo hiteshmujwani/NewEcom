@@ -20,9 +20,7 @@ export default function Home() {
   const [page, setPage] = useState(1);
 
   const loadMore = async () => {
-    const res = await axios.get(
-      `${process.env.REACT_APP_API}/api/v1/product/more-product/${page}`
-    );
+    const res = await axios.get(`/api/v1/product/more-product/${page}`);
     setProducts([...products, ...res.data.products]);
   };
 
@@ -33,9 +31,7 @@ export default function Home() {
 
   const getCategories = async () => {
     try {
-      const res = await axios.get(
-        `${process.env.REACT_APP_API}/api/v1/category/all-categories`
-      );
+      const res = await axios.get(`/api/v1/category/all-categories`);
       setCategories(res.data.categories);
     } catch (error) {
       console.log(error);
@@ -44,7 +40,7 @@ export default function Home() {
 
   const totalProduct = async () => {
     const res = await axios.get(
-      `${process.env.REACT_APP_API}/api/v1/product/product-total`
+      `/api/v1/product/product-total`
     );
     setTotal(res.data.total);
   };

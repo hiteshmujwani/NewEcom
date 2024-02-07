@@ -14,7 +14,7 @@ export default function Orders() {
   },[])
   
   const getOrders = async ()=>{
-    const res = await axios.get(`${process.env.REACT_APP_API}/api/v1/auth/get-orders`)
+    const res = await axios.get(`/api/v1/auth/get-orders`)
     setOrders(res.data.orders)
   }
 

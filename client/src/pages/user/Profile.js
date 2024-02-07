@@ -51,7 +51,7 @@ export const Profile = ()=> {
   const handleSubmit = async (e) =>{
     try {
       e.preventDefault()
-      const res = await axios.put(`${process.env.REACT_APP_API}/api/v1/auth/update-profile`,{name,email,password,phone,address})
+      const res = await axios.put(`/api/v1/auth/update-profile`,{name,email,password,phone,address})
       setAuth({...auth,user:res?.data?.updateUser})
       let ls = localStorage.getItem('auth')
       ls = JSON.parse(ls)

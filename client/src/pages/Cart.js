@@ -72,7 +72,7 @@ export const Cart = () => {
     {cart.length > 0 ? (cart.map((p)=>(
         <>
         <div className="flex flex-col rounded-lg bg-white sm:flex-row">
-        <img className="m-2 h-24 w-28 rounded-md border object-cover object-center" src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`} alt={p.slug} />
+        <img className="m-2 h-24 w-28 rounded-md border object-cover object-center" src={`/api/v1/product/product-photo/${p._id}`} alt={p.slug} />
         <div className="flex w-full flex-col px-4 py-2 ">
 
           <p className=" font-semibold">{p.name}</p>
