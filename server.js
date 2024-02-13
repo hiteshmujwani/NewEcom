@@ -27,7 +27,13 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(express.static(path.join(__dirname,'./client/public')))
 
-
+app.use(cors({
+  origin: 'http://example.com',
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  exposedHeaders: ['Content-Length'],
+  credentials: true
+}));
 
 
 //routes 
